@@ -1,0 +1,40 @@
+body,header,nav,li,h1,h2,h3,a,article,section,p,span,img,figure,figcaption{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	height: 60px;
+	overflow: hidden;
+	background-color: #333333;
+	font-family: "微软雅黑";
+}
+
+.logo{
+	float: left;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+ul{
+	float: right;
+	margin-right: 20px;  
+	margin-top: 20px;
+}
+
+li{
+	float: right;
+	color: white;
+	font-size: 12px;
+}
+
+
+li a{
+	text-decoration: none;
+}
+
+li a:hover,
+li a:focus,
+li a active{
+	color: #a7a1a1;
+}
