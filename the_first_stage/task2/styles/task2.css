@@ -108,4 +108,99 @@ article:focus{
 	background-color: #cdcddc;
 }
 
+aside h3{
+	border-left: 3px solid #cdcddc;
+	padding: 5px 10px;
+}
+
+form em{
+	display: block;
+	margin-left: 128px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	font-style: normal;
+	font-size: 14px;
+	color: #848484;
+}
+
+input,label,textarea,button,select{
+	font-family: "微软雅黑";
+}
+
+.email input,
+.password input,
+.rep-password input{
+	margin-left: 10px;
+}
+
+.email,.password,.rep-password{
+	margin-bottom: 10px;
+}
+
+.password{
+	margin-left: 32px;
+}
+
+.gender, .city, .hobbies{
+	margin-left: 80px;
+	margin-bottom: 10px;
+}
+
+.gender span,
+.hobbies span{
+	margin-right: 5px;
+}
+
+.city label{
+	margin-right: 10px;
+}
+
+.desc label,
+.desc textarea{
+	display: block;
+	float: left;
+}
+
+.desc{
+	overflow: hidden;
+}
+
+.desc label{
+	margin-left: 48px;
+	margin-right: 18px;
+}
+.desc textarea{
+	width: 400px;
+	height: 80px;
+}
+
+form button{
+	padding: 8px;
+	width: 100%;
+	border: none;
+	margin-top: 8px;
+	color: white;
+	background-color: #3355d0;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
+.wrap{
+	margin-left: 300px;
+}
+
+footer{
+	height: 70px;
+	width: 100%;
+	background-color: #282828;
+	padding-top: 20px;
+}
+
+footer span{
+	margin-left: 48%;
+	color: white;
+	font-size: 14px;
+}
+
+
 
