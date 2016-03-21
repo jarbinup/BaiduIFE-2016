@@ -19,7 +19,6 @@ body{
 .team-intro,
 .team-info,
 .per-intro{
-	/*float: left;*/
 	padding: 20px;
 	border: 1px solid #999;
 	background-color: white;
@@ -56,5 +55,8 @@ body{
 }
 
 .per-logo{
-	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.per-logo .logo-1{
+	margin-top: 0px;
 }
