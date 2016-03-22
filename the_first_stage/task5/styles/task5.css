@@ -1,8 +1,4 @@
-/*body,header,nav,li,h1,h2,h3,a,article,section,p,span,img,figure,figcaption{
-	margin: 0;
-	padding: 0;
-}*/
-body,nav,img,ul,li{
+body,nav,img,ul,li,figure{
 	margin: 0;
 	padding: 0;
 }
@@ -75,16 +71,26 @@ article:focus{
 	padding: 20px;
 }
 
+.arti-three img{
+	height: 80px;
+	width: 100px;
+}
 .arti-three figure{
 	text-align: center;
-	width: 300px;
-	padding: 10px;
-	margin-bottom: 30px;
+	width: 120px;
+	height: 124px;
+	margin-left: 20px;
+	margin-bottom: 20px;
 	border: 2px solid #cdcdcd;
+	float: left;
 }
 .arti-three figcaption{
-	font-size: 20px;
-	padding-bottom: 10px;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-bottom: 8px;
+}
+.arti-three{
+	overflow: hidden;
 }
 
 .arti-four table{
@@ -108,9 +114,17 @@ article:focus{
 	background-color: #cdcddc;
 }
 
+aside{
+	width: 365px;
+	position: absolute;
+	top: 80px;
+	right: 20px;
+}
+
 aside h3{
 	border-left: 3px solid #cdcddc;
 	padding: 5px 10px;
+	font-size: 16px;
 }
 
 form em{
@@ -119,7 +133,7 @@ form em{
 	padding-top: 8px;
 	padding-bottom: 6px;
 	font-style: normal;
-	font-size: 14px;
+	font-size: 13px;
 	color: #848484;
 }
 
@@ -178,7 +192,7 @@ form button{
 	padding: 8px;
 	width: 100%;
 	border: none;
-	margin-top: 8px;
+	margin-top: 20px;
 	color: white;
 	background-color: #3355d0;
 	font-size: 18px;
@@ -186,7 +200,7 @@ form button{
 }
 
 .wrap{
-	margin-left: 300px;
+	margin-left: 0;
 }
 
 footer{
@@ -202,5 +216,6 @@ footer span{
 	font-size: 14px;
 }
 
-
-
+main {
+	margin-right: 425px;
+}
