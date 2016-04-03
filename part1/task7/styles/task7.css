@@ -1,0 +1,107 @@
+body,header,span,div,main,h1,h2,h3,h4,p,a,ul,li,article{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Microsoft yahei";
+	
+}
+.wrap{
+	width: 1280px;
+	margin: auto;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+ul{
+	list-style: none;
+}
+
+header{
+	margin-bottom: 2px;
+}
+
+.logo{
+	line-height: 55px;
+	margin-left: 60px;
+	padding-left: 45px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;
+	background: url("../images/logo.png") no-repeat left center;
+}
+
+.nav{	
+	font-size: 13px;
+	float: right;
+	margin-right: 55px;
+	overflow: hidden;
+}
+
+.nav li{
+	float: left;
+	margin-left: 5px;
+}
+
+.nav li a{
+	height: 55px;
+	line-height: 55px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px
+}
+
+.nav li a:hover,
+.nav li a:focus,
+.nav li a:active{
+	color: #e74f4d;
+	border-bottom: 3px solid #e74f4d;
+}
+.login{
+	background: url("../images/login.jpg") no-repeat left center;
+	color: #e74f4d
+}
+
+.dis-pic{
+	background: url("images/think.jpg");
+	color: #ffffff;
+}
+
+.time-of{
+	height: 690px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-left: 110px;	
+}
+
+.time-of p{
+	padding-top: 230px;		
+}
+
+.dis-pic button{
+	display: block;
+	background-color: #e74f4d;
+	color: #ffffff;
+	border: none;
+	font-family: "Microsoft yahei";
+	padding: 14px 90px;
+	font-size: 30px;
+}
+
+.dis-pic h3{
+	font-weight: normal;
+	font-size: 48px;
+	color: #ffffff;
+}
+
+.time-of span{
+	display: block;
+	font-size: 20px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	line-height: 1.5;
+}

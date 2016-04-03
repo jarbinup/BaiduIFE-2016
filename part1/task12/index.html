@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="task122.css">
+		<title>CSS3新特性</title>
+		<style>
+	body,div,span,a {
+		margin: 0;
+		padding: 0;
+	}
+    tr:nth-child(odd) {
+        background-color: gray;
+    }
+
+    tr:nth-child(-n+4) {
+        color: red;
+    }
+
+     tr:first-child {
+        background-color: black;
+        color: white;
+    }
+    
+    input {
+    	width: 80px;
+    	margin-top: 30px;
+    	transition: width 1s;
+    }
+
+    input:focus {
+    	width: 240px;
+    }
+	
+    .banner{
+    	position: absolute;
+    }
+    .item {
+    	width: 250px;
+    	height: 150px;
+    	float: left;
+    }
+
+
+	.wrap-item {
+		width: 750px;
+		overflow: hidden;
+		transition: left 1s ease;
+	}
+
+    .slide {
+    	width: 250px;
+    	height: 100%;
+    	overflow: hidden;
+    	position: relative;
+    	outline: 1px solid blue;
+    }
+
+    .item:first-child{
+    	background-color: blue;
+    }
+    .item:nth-child(2){
+    	background-color: orange;
+    }
+    .item:nth-child(3){
+    	background-color: red;
+    }
+
+    .btn-1:hover ~ .wrap-item,
+    .btn-1:focus ~ .wrap-item,
+    .btn-1:active ~ .wrap-item{
+        left: 0;
+    }
+
+    /*.btn-2:hover ~ .wrap-item,
+    .btn-2:focus ~ .wrap-item,*/
+    #sec:target ~ .wrap-item{
+        left: -250px;
+    }
+
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>排名</th>
+				<th>网站</th>
+				<th>热度</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>百度前端技术学院</td>
+				<td>13000</td>
+			</tr>
+		</table>
+
+		<input type="text">
+
+		<div class="slide">
+			<span id="fir"></span>
+            <span id="sec"></span>
+            <span id="thr"></span>
+			<div class="wrap-item">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="banner">
+				<a href="#fir">1</a>
+				<a href="#sec">2</a>
+				<a href="#thr">3</a>
+			</div>
+		</div>
+	</body>
+</html>
