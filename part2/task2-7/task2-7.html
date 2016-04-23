@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>task2-6</title>
+        <style>
+        .showarea{
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .showarea li{
+            list-style: none;
+            color: white;
+            width: 10px;
+            float: left;
+            margin:2px;
+
+        }
+        </style>
+    </head>
+    
+    <body>
+        <input id="input-box" type="text" placeholder="请输入10-100之间的整数">
+        <span id="button-in">
+            <button id="left-in" name="leftIn">左侧入</button>
+            <button id="right-in" name="rightIn">右侧入</button>
+        </span>
+        <span id="button-out">
+            <button id="left-out" name="leftOut">左侧出</button>
+            <button id="right-out" name="rightOut">右侧出</button>
+        </span>
+            <button id="sort" name="sort">排序</button>
+            <button id="random-data">随机生成20个数</button>
+        <ul class="showarea"></ul>
+        <script src="task2-7.js"></script>
+    </body>
+    
+</html>
