@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>task2-8</title>
+        <style>
+        textarea,input,button,span{
+            margin: 0;
+            padding: 0;
+        }
+        .showarea{
+            overflow: hidden;
+            width: 100%;
+            margin-left: 10px;
+            padding: 10px;
+        }
+        .showarea li{
+            list-style: none;
+            color: white;
+            float: left;
+            margin:2px;
+            display: inline-block;
+
+        }
+        span{
+            margin: 0 20px;
+        }
+
+        button{
+            border: 0;
+            padding: 3px 10px;
+        }
+
+        textarea{
+            height: 60px;
+            width: 230px;
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 15px;
+
+        }
+        </style>
+    </head>
+    
+    <body>
+        <textarea id="input-box" type="text" placeholder="请输入文本"></textarea>
+        <span id="button-in">
+            <button id="add" name="add">添加</button>
+        </span>
+
+        <input id="search-box" type="text" placeholder="请输入查询文本">
+        <button id="search-btn" name="search-btn">查询</button>
+        <ul class="showarea"></ul>
+        <script src="task2-8.js"></script>
+    </body>
+    
+</html>
