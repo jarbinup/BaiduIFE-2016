@@ -1,0 +1,34 @@
+body,pre{
+    font-family: "微软雅黑";
+}
+.description, section{
+    display: inline-block;
+    float: left;
+}
+
+section{
+    margin-top: 35px;
+}
+.description{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+td span{
+    margin: auto;
+    display: inline-block;
+    float: right;
+}
+td button{
+    display: block;
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+
+}
+td{
+    height: 30px;
+    width: 50px;
+    padding:0 5px;
+    outline:1px solid black;
+}

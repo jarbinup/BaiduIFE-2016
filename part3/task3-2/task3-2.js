@@ -1,5 +1,6 @@
 //获取节点
 var getNode = function (ele) {
+    
     return document.querySelector(ele);
 };
 
@@ -32,12 +33,18 @@ var addItems = function (arguments) {
 
 //为表格中的每一行计数
 var count = 0;
+
+//添加到表格中的数据
 var tableData = {};
+
+//需要比较的列
 var compArrayObj = {};
+
+//保存初始的排列顺序
 var beforeOrder = {};
 
 //设置可排序的项
-var setItems = function (item) {
+var addSeqMethod = function (item) {
 	for (var i = 0; i < tableData[0].length; i++) {
 		if(tableData[0][i] == item){
 			node = getNode('table').childNodes[0].childNodes[i];
@@ -45,11 +52,24 @@ var setItems = function (item) {
 		}
 	};
 };
+
+//渲染更新数据列表
+var renderTable = function (count, num) {
+	//对tableData里面的数组进行渲染
+	//console.log(count,num);
+	var tds = getNode('table').childNodes[count].childNodes;
+	for(var i = 0; i < num; i++) {
+	    tds[i].innerHTML = tableData[count][i];
+	}
+};
+
 //添加排序图标
 var addIcon = function (btnNode, item) {
 	var span = document.createElement('span');
 	var upBtn = document.createElement('button');
+	upBtn.setAttribute('class','up-btn');
 	var downBtn = document.createElement('button');
+	downBtn.setAttribute('class','down-btn');
 	span.appendChild(upBtn);
 	span.appendChild(downBtn);
 	btnNode.appendChild(span);
@@ -67,9 +87,14 @@ var addIcon = function (btnNode, item) {
 
 	//去掉第一项undefined
     compArray.shift();
-	// console.log(beforeOrder[Object.keys(beforeOrder)[0]]);
-
 	//抽出数组排序
+    // console.log(compArrayObj);
+    addEvent(btnNode, item);   
+};
+
+
+//绑定事件
+var addEvent = function (node, item) {
 	function compareAsc (value1, value2){
         return value2-value1;
 	}
@@ -77,61 +102,49 @@ var addIcon = function (btnNode, item) {
 	function compareDes (value1, value2){
 	    return value1-value2;
 	}
-    
     console.log(compArrayObj[item]);
-
-    var ascArray = compArrayObj[item].sort(compareAsc);
-    var desArray = compArrayObj[item].sort(compareDes);
- 
-    console.log(ascArray);
-    console.log(desArray);
+    
+    // console.log(ascArray);
+    // console.log(desArray);
 
     var afterOrder = function (referArray, beforeOrder) {
 	    for(var i = 0; i < referArray.length; i++) {
-	    	for(var m = 1; m < Object.keys(beforeOrder).length; m++){
-	            if(beforeOrder[m][i+1] == referArray[i]){
-	            	console.log(i);
-	            	console.log(referArray[i]);
-		            tableData[i+1] = beforeOrder[m];
-		            console.log(beforeOrder[m]);
-		            renderTable(i+1, referArray.length);
-	            }
-	    	}
+	    	for(var m  in beforeOrder ){
+	    		if(beforeOrder[m][item] == referArray[i]) {
+	    			tableData[i+1] = beforeOrder[m];
+	    			renderTable(i+1, tableData[i+1].length);
+	    		}
+	        }
 	    }    
     };
     
     //绑定事件
-    upBtn.onclick = function () {
-        afterOrder(ascArray, beforeOrder);
-	};
-	downBtn.onclick = function () {
-		afterOrder(desArray, beforeOrder);
-	};
-};
+    node.onclick = function (event) {
+    	target = event.target;
+    	if(target.className == 'up-btn') {
+    		var ascArray = compArrayObj[item].sort(compareDes);
+    		//console.log(ascArray);
+    		afterOrder(ascArray, beforeOrder);
+    	}
 
-
-//渲染更新数据列表
-var renderTable = function (count, num) {
-	//对tableData里面的数组进行渲染
-	//console.log(count,num);
-	var tds = getNode('table').childNodes[count].childNodes;
-	for(var i = 0; i < num; i++) {
-	    tds[i].innerHTML = tableData[count][i];
-	}
+    	if(target.className == 'down-btn') {
+    		var desArray = compArrayObj[item].sort(compareAsc);
+    		//console.log(desArray);
+    		afterOrder(desArray, beforeOrder);
+    	}
+        
+	};
 };
 
 var tableWrap = getNode('section');
-createTable(tableWrap, 5, 5);
+createTable(tableWrap, 6, 5);
 addItems(['姓名', '语文', '数学', '英语', '总分']);
-addItems(['bean1', '2', '0', '75', '234']);
-addItems(['bean2', '9', '8', '75', '234']);
-addItems(['bean3', '7', '9', '75', '234']);
-addItems(['bean4', '3', '1', '75', '234']);
-setItems('语文');
-setItems('数学');
-// setItems('英语');
-// setItems('总分');
-console.log(beforeOrder);
-console.log(compArrayObj);
-
-
+addItems(['bean1', '2', '0', '2', '238']);
+addItems(['bean2', '9', '8', '5', '264']);
+addItems(['bean3', '7', '9', '7', '56']);
+addItems(['bean4', '3', '1', '1', '78']);
+addItems(['bean5', '10', '10', '10', '537']);
+addSeqMethod('语文');
+addSeqMethod('数学');
+addSeqMethod('英语');
+addSeqMethod('总分');
