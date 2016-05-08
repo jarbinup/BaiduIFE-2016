@@ -26,11 +26,15 @@ var addItems = function (arguments) {
     }
     tableData[count] = tableCol;
     renderTable(count, arguments.length);
+    // console.log(tableData);
     count++;
 };
 
+//为表格中的每一行计数
 var count = 0;
 var tableData = {};
+var compArrayObj = {};
+var beforeOrder = {};
 
 //设置可排序的项
 var setItems = function (item) {
@@ -41,75 +45,75 @@ var setItems = function (item) {
 		}
 	};
 };
-
 //添加排序图标
-var addIcon = function(btnNode, num) {
+var addIcon = function (btnNode, item) {
 	var span = document.createElement('span');
 	var upBtn = document.createElement('button');
 	var downBtn = document.createElement('button');
 	span.appendChild(upBtn);
 	span.appendChild(downBtn);
 	btnNode.appendChild(span);
-	var inArray = {};
-	var comparray = [];
+    
+    //取出按钮所在列的数据保存在compArray数组中
+    //beforeOrder中保存排序之前的状态
+    
+	var compArray= [];
 	for(var i = 1; i < Object.keys(tableData).length; i++) {
-		comparray[i] = tableData[i][num];
-		inArray[i] = tableData[i];
+		compArray[i] = tableData[i][item];
+		beforeOrder[i] = tableData[i];
 	}
 
-	for(var o in inArray){
-		console.log(o);
-	}
-	console.log(inArray);
+	compArrayObj[item] = compArray;
 
-	console.log(comparray);
-	function compare(value1, value2){
+	//去掉第一项undefined
+    compArray.shift();
+	// console.log(beforeOrder[Object.keys(beforeOrder)[0]]);
+
+	//抽出数组排序
+	function compareAsc (value1, value2){
         return value2-value1;
-    }
+	}
 
-    comparray.sort(compare);
-    console.log(comparray);
+	function compareDes (value1, value2){
+	    return value1-value2;
+	}
+    
+    console.log(compArrayObj[item]);
 
-    for(var j = 1; j < Object.keys(tableData).length; j++) {
-    	for(var m in inArray){
-            if(inArray[m][j] == comparray[j-1]){
-            tableData[j] = inArray[m];
-            renderTable(j, comparray.length);
-            }
-    	}
-    }
+    var ascArray = compArrayObj[item].sort(compareAsc);
+    var desArray = compArrayObj[item].sort(compareDes);
+ 
+    console.log(ascArray);
+    console.log(desArray);
 
-    console.log(tableData)
+    var afterOrder = function (referArray, beforeOrder) {
+	    for(var i = 0; i < referArray.length; i++) {
+	    	for(var m = 1; m < Object.keys(beforeOrder).length; m++){
+	            if(beforeOrder[m][i+1] == referArray[i]){
+	            	console.log(i);
+	            	console.log(referArray[i]);
+		            tableData[i+1] = beforeOrder[m];
+		            console.log(beforeOrder[m]);
+		            renderTable(i+1, referArray.length);
+	            }
+	    	}
+	    }    
+    };
+    
+    //绑定事件
+    upBtn.onclick = function () {
+        afterOrder(ascArray, beforeOrder);
+	};
+	downBtn.onclick = function () {
+		afterOrder(desArray, beforeOrder);
+	};
+};
 
-
-
-	// upBtn.onclick = function () {
-	// 	orderMethod.up(comparray);
-	// 	for(var j = 1; j < tableData.length; j++) {
-	// 		tableData[j] = comparray[j][num];
-	// 	}
-
-	// };
-	// downBtn.onclick = function () {
-	// 	orderMethod.down(comparray);
-	// };
-}
-//排序方法
-// var orderMethod = (function (arguments) {
-   
-//     function compare(value1, value2){
-//         return value2-value1;
-//     };
-//     return{
-//     	up: array.sort(compare),
-//     	down: this.up.reverse()
-//     };
-// })();
 
 //渲染更新数据列表
 var renderTable = function (count, num) {
 	//对tableData里面的数组进行渲染
-	console.log(count,num);
+	//console.log(count,num);
 	var tds = getNode('table').childNodes[count].childNodes;
 	for(var i = 0; i < num; i++) {
 	    tds[i].innerHTML = tableData[count][i];
@@ -119,11 +123,15 @@ var renderTable = function (count, num) {
 var tableWrap = getNode('section');
 createTable(tableWrap, 5, 5);
 addItems(['姓名', '语文', '数学', '英语', '总分']);
-addItems(['bean1', '10', '79', '75', '234']);
-addItems(['bean2', '30', '79', '75', '234']);
-addItems(['bean3', '20', '79', '75', '234']);
-addItems(['bean4', '90', '79', '75', '234']);
+addItems(['bean1', '2', '0', '75', '234']);
+addItems(['bean2', '9', '8', '75', '234']);
+addItems(['bean3', '7', '9', '75', '234']);
+addItems(['bean4', '3', '1', '75', '234']);
 setItems('语文');
-// setItems('数学');
+setItems('数学');
+// setItems('英语');
+// setItems('总分');
+console.log(beforeOrder);
+console.log(compArrayObj);
 
 
