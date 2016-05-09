@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>task3-3UI组件之冻结行列表格</title>
+    <link rel="stylesheet" href="task3-3.css">
+  </head>
+<body>
+    <section>   
+    </section>
+    <br>
+    <br>
+    <div class="description">
+        <h4>使用说明</h4>
+        <p>1.使用<strong>getNode(ele)</strong>在页面中找到要创建排序列表的位置</p>
+        <p>2.使用<strong>createTable(node, col, row)</strong>创建表格</p>
+        <p>3.使用<strong>addItems(arguments)</strong>向表格中添加一条数据</p>
+        <p>4.使用<strong>addSeqMethod(item)</strong>为表头的某一项添加排序方法</p>
+
+        <h4>示例</h4>
+        <pre>
+        var tableWrap = getNode('section');
+        createTable(tableWrap, 16, 5);
+        addItems(['姓名', '语文', '数学', '英语', '总分']);
+        addItems(['bean1', '2', '0', '2', '238']);
+        addItems(['bean2', '9', '8', '5', '264']);
+        addItems(['bean3', '7', '9', '7', '56']);
+        addItems(['bean4', '3', '1', '1', '78']);
+        addItems(['bean5', '10', '10', '10', '537']);
+        addItems(['bean6', '45', '23', '23', '438']);
+        addItems(['bean7', '34', '6', '15', '304']);
+        addItems(['bean8', '87', '9', '17', '256']);
+        addItems(['bean9', '66', '7', '14', '478']);
+        addItems(['bean10', '29', '44', '110', '278']);
+        addItems(['bean11', '12', '14', '12', '1238']);
+        addItems(['bean12', '19', '18', '15', '1264']);
+        addItems(['bean13', '17', '19', '18', '156']);
+        addItems(['bean14', '13', '11', '11', '178']);
+        addItems(['bean15', '110', '110', '110', '1537']);
+        addSeqMethod('语文');
+        addSeqMethod('数学');
+        addSeqMethod('英语');
+        addSeqMethod('总分');
+        </pre>
+    </div>
+    <script src="task3-3.js"></script>
+</body>
+</html>

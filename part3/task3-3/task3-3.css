@@ -1,0 +1,55 @@
+body,pre{
+    font-family: "微软雅黑";
+}
+/*.description, section{
+}*/
+
+section{
+    margin-left: 20px;
+    margin-top: 35px;
+}
+.description{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+table {
+    position: relative;
+    border-spacing: 0;
+}
+td span{
+    margin: auto;
+    display: inline-block;
+    float: right;
+}
+td button{
+    display: block;
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+
+}
+
+td{
+    height: 35px;
+    width: 55px;
+    padding:0 5px;
+    border:1px solid black;
+}
+
+.normal{
+    display: table-row;
+}
+
+.first-fix{
+    position: fixed;
+    top: 0;
+    left: 29px;
+    color: #fff;
+    background-color: #5C5757;
+}
+
+.disp{
+    display: none;
+}
