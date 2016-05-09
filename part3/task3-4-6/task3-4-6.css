@@ -1,0 +1,35 @@
+body{
+	font-family: "微软雅黑";
+}
+
+.input-box{
+	width: 110px;
+	font-size: 15px;
+	border-style: none;
+	border: 1px solid #59596C;
+	padding-left: 18px;
+	background: url('calendar.png') left center no-repeat;
+}
+
+.calendar{
+	margin-top: 10px;
+}
+
+.calendar table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid black;
+} 
+.calendar td{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    /*border: 1px solid black;*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+td img{
+        margin-top: 20%;
+}
+
