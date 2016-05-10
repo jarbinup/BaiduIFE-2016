@@ -16,16 +16,49 @@ var period = function (num) {
 	};
 };
 
-//给定年份和月份，用日期填充表格
+//给定年份和月份，获取每月的天数
 var getDayData = function (year, month) {
     var showMonthNode = getNode('.show-month');
+    var dayData = [];
+    var weekData = [];
+    var count = 0;
     showMonthNode.innerHTML = year +'年' +month+ '月' ;
-    var showMonthObj = new Date(year, month-1);
-    var showMonthObj1 = new Date(year,month-1,32);
-    console.log(showMonthObj.getDate());
-    console.log(showMonthObj1.getMonth());
-    // for(i = 1, i < 33. i++){
+    for(var i = 1; i < 32; i++){
+        var nextDay = new Date();
+        nextDay.setFullYear(year, month-1, i);
+        if(nextDay.getMonth() == month-1) {
+        	weekData.push(nextDay.getDate());
+            dayData.push(nextDay.getDay());
+        }
+    }
+    renderTable(dayData,weekData);
+    // console.log(dayData);
+    // console.log(weekData);
+};
 
-    // }
+var j = 1;
+var weekNode = getNode('.week'+j).querySelectorAll('td');
+
+var renderTable = function (day, date) {
+	console.log(day);
+    console.log(date);
+    var qi = document.querySelectorAll('.week td');
     
+    for(var m = 0; m < qi.length; m++){
+    	qi[m].innerHTML = "";
+    }
+	for(var i = 0; i<date.length; i++){
+		weekNode[day[i]].innerHTML = date[i];
+		if(day[i] == 6) {
+			j++;
+			if(j < 7){
+				weekNode = getNode('.week'+j).querySelectorAll('td');
+			}
+			else{
+			 	j = 1;
+				weekNode = getNode('.week'+j).querySelectorAll('td');
+			}
+                
+		}
+	}
 };
