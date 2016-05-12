@@ -3,11 +3,11 @@ body{
 }
 
 .input-box{
-	width: 110px;
+	width: 150px;
 	font-size: 15px;
 	border-style: none;
 	border: 1px solid #59596C;
-	padding-left: 18px;
+	padding: 3px 3px 3px 18px;
 	background: url('calendar.png') left center no-repeat;
 }
 
@@ -31,5 +31,13 @@ body{
 
 td img{
         margin-top: 20%;
+}
+
+.show-day:hover,
+.show-day:focus,
+.show-day:active{
+    background-color: red;
+    color: #fff; 
+    cursor: pointer;
 }
 
