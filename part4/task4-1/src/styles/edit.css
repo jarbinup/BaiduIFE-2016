@@ -1,5 +1,6 @@
 body{
 	font: normal 100% Helvetica, Arial, sans-serif;
+	background-color: #efefef;
 }
 
 span{
@@ -36,10 +37,116 @@ span{
 }
 
 .main {
-	background-color: #efefef;
 	width: 100%;
-	position: absolute;
-	top: 2.875em;
-	bottom: 0;
 }
 
+.edit-ques {
+    width: 72.4%;
+    background-color: #ffffff;
+    margin-top: 4.375em;
+    margin-bottom: 2.5em;
+    float: left;
+    margin-left: 13.8%;
+    box-shadow:  2px 2px 3px #848484;
+    border-radius: 6px;
+    padding-bottom: 1.5em;
+}
+
+.ques-title {
+	width: 80%;
+	height: 3.75em;
+	border: none;
+	text-align: center;
+	outline: none;
+	float: left;
+	margin-left: 10%;
+	font-size: 1.375em;
+	margin-top: 1.56em;
+	margin-bottom: 1em;
+
+}
+
+.ques-title:hover,
+.ques-title:active {
+    background-color: #fef1e8;
+}
+
+.add-ques{
+	width: 90%;
+	float: left;
+	margin-left: 5%;
+	border-top: 2px solid #cccccc;
+	border-bottom: 2px solid #cccccc;
+	padding-top: 1.55em;
+	padding-bottom: 1.55em;
+	/*padding: 1.56em 1.25em;*/
+
+}
+
+.add-btn {
+    width: 90%;
+    height: 5em;
+    border: 1px solid #cbcbcb;
+    outline: none;
+    background-color: #eeeeee;
+    font-size: 0.875em;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 5em;
+    border-top: none;
+}
+
+.type {
+    display: inline-block;
+    width: 90%;
+    border: 1px solid #cbcbcb;
+    margin-left: 5%;
+    padding-top: 1em;
+    border-bottom: none;
+    text-align: center;
+}
+
+.type button {
+	border: none;
+	outline: none;
+	width: 6.25em;
+	height: 2em;
+	margin-right: 0.9em;
+	margin-bottom: 1em;
+}
+
+.ddl {
+	display: inline-block;
+	float: left;
+	margin-top: 1.5em;
+	margin-left: 13%;
+	font-size: 0.8em;
+	line-height: 3em;
+	overflow: hidden;
+}
+
+.ddl input {
+	margin-left: 0.8em;
+	height: 1.3em;
+	width: 8em;
+    outline: none;
+}
+
+.deploy {
+	display: inline-block;
+	float: right;
+	margin-right: 13%;
+	margin-top: 1.5em;
+
+	overflow: hidden;
+}
+.deploy button {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #000000;
+	outline: none;
+	background-color: #ffffff;
+    padding: 0.15em 0.5em;
+    margin-left: 0.8em;
+    
+}
