@@ -20,11 +20,36 @@
         <div class="edit-ques">
             <input class="ques-title" type="text" name="" value="这里是标题">
             <div class="add-ques">
-                <pre>
-                sdfvsdf
-                dfvsdf
+                <ul>
+                    <li>
+                        Q1.<input type="text" name="ques1" value="单选题">
+                        <ul class="choice">
+                            <li><input type="radio" name="single"><input type="text" name="" value="1"></li>
+                            <li><input type="radio" name="single"><input type="text" name="" value="2"></li>
+                            <li><input type="radio" name="single"><input type="text" name="" value="3"></li>
+                            <li><input type="radio" name="single"><input type="text" name="" value="4"></li>
+                        </ul>
+                    </li>
 
-            </pre>
+                    <li>
+                        Q2.<input type="text" name="ques1" value="多选题">
+                        <ul class="choice">
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="1"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="2"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="3"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="4"></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Q3.<input type="text" name="ques1" value="文本框">
+                        <ul class="choice">
+                            <li>
+                                <textarea style="width: 70%; height:5em; max-width: 80%"></textarea>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                 <div class="add">
                     <div class="type">
                         <button>单选</button>

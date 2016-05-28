@@ -83,6 +83,27 @@ span{
 
 }
 
+.add-ques ul {
+	list-style: none;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+
+}
+.add-ques > ul > li{
+	padding: 0.7em 0.8em 1.3em 0.8em;
+}
+.add-ques > ul > li:hover{
+	background-color: #fef1e8;
+}
+.add-ques input[type=text] {
+	width: 70%;
+	border: none;
+	outline: none;
+	background-color: rgba(11,11,11,0);
+}
+
+.choice li {}
+
 .add-btn {
     width: 90%;
     height: 5em;
@@ -122,31 +143,38 @@ span{
 	margin-left: 13%;
 	font-size: 0.8em;
 	line-height: 3em;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .ddl input {
-	margin-left: 0.8em;
+	margin-left: 3%;
 	height: 1.3em;
-	width: 8em;
+	width: 35%;
     outline: none;
 }
 
 .deploy {
 	display: inline-block;
-	float: right;
-	margin-right: 13%;
+	float: left;
+	margin-left: 13%;
 	margin-top: 1.5em;
 
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .deploy button {
 	margin: 0;
 	padding: 0;
-	border: 1px solid #000000;
-	outline: none;
+	outline: 1px solid #000000;
+	border: none;
 	background-color: #ffffff;
     padding: 0.15em 0.5em;
-    margin-left: 0.8em;
-    
+    margin-left: 0.8em;   
+}
+
+.deploy button:hover,
+.deploy button:active {
+	color: #fff;
+	background-color: #ee7419;
+	outline: 1px solid #ee7419;
+
 }
