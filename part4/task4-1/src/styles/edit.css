@@ -2,7 +2,10 @@ body{
 	font: normal 100% Helvetica, Arial, sans-serif;
 	background-color: #efefef;
 }
-
+a{
+	text-decoration: none;
+	color: #fff;
+}
 span{
 	display: inline-block;
 }
@@ -90,7 +93,15 @@ span{
 
 }
 .add-ques > ul > li{
-	padding: 0.7em 0.8em 1.3em 0.8em;
+	padding: 0.7em 0.8em 1.5em 0.8em;
+}
+.add-ques > ul > li button{
+    border: none;
+    outline: none;
+    float: right;
+    background-color: rgba(1,1,1,0);
+    color: black;
+    margin-right: 0.4em;
 }
 .add-ques > ul > li:hover{
 	background-color: #fef1e8;
