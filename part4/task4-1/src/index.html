@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>微型调查问卷</title>
+    <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="./styles/basic.css">
+	<link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/edit.css">
+	<style type="text/css">	
+	</style>
+</head>
+<body>
+
+    <section class="nav">
+        <img src="./images/question.png">
+    	<span id="logo"><a href="#/">问卷管理</a></span>
+        <span id="per-ques"><a href="#/list">我的问题</a></span>
+    </section>
+
+    <section class="main">
+    	<div id="create-ques" class="display-show">
+    		<button>
+                <a href="#/edit">新建问卷</a>
+            </button>
+    	</div>
+
+        <div id="edit-ques" class="display-hidden">
+            <input class="ques-title" type="text" name="" value="这里是标题">
+            <div class="add-ques">
+                <ul>
+                    <li>
+                        Q1.<input type="text" name="ques1" value="单选题">
+                        <ul class="choice">
+                            <li><input type="radio" name="single"><input type="text" name="" value="1"></li>
+                            <li><input type="radio" name="single"><input type="text" name="" value="2"></li>
+                            <li><span>add</span></li>
+                            <!-- <li><input type="radio" name="single"><input type="text" name="" value="4"></li> -->
+                        </ul>
+                        <button>上移</button>
+                        <button>上移</button>
+                        <button>上移</button>
+                        <button>上移</button>
+                    </li>
+
+                    <li>
+                        Q2.<input type="text" name="ques1" value="多选题">
+                        <ul class="choice">
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="1"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="2"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="3"></li>
+                            <li><input type="checkbox" name="single"><input type="text" name="" value="4"></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Q3.<input type="text" name="ques1" value="文本框">
+                        <ul class="choice">
+                            <li>
+                                <textarea style="width: 70%; height:5em; max-width: 80%"></textarea>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="add">
+                    <div class="type">
+                        <button id="single">单选</button>
+                        <button id="double">多选</button>
+                        <button id="text">文本题</button>
+                    </div>
+                    <div class="add-btn">添加问题</div>
+                </div>
+            </div>
+            <span class="ddl">问卷截至日期<input type="" name="" value="2016-04-22"></span>
+            <span class="deploy">
+                <button>保存问卷</button>
+                <button>发布问卷</button>
+            </span>
+        </div>
+
+        <div id="pro-ques" class="display-hidden"></div>
+    </section>
+
+    <script src="./scripts/router.js"></script>
+    <script src="./scripts/edit.js"></script>
+</body>
+</html>
