@@ -1,54 +1,4 @@
-body{
-	font: normal 100% Helvetica, Arial, sans-serif;
-}
-
-span{
-	display: inline-block;
-}
-a{
-	text-decoration: none;
-	color: #fff;
-}
-
-.nav{
-	height: 2.875em;
-	background-color: #ee7419;
-	color: #ffffff;
-}
-
-#logo{
-	font-size: 1.25em;
-	font-weight: bold;
-	margin-top: 0.45em;
-	margin-left: 0.5%;
-}
-.nav img{
-	width: 1.25em;
-	height: 1.25em;
-    max-width: 100%;
-    float: left;
-    overflow: hidden;
-    margin-top: 0.85em;
-    margin-left:7%;
-}
-.nav span{
-	float: left;	
-}
-
-#per-ques {
-	margin-top: 0.8em;
-	padding-left: 6%;
-}
-
-.main {
-	background-color: #efefef;
-	width: 100%;
-	position: absolute;
-	top: 2.875em;
-	bottom: 0;
-}
-
-.create-ques {
+#create-ques {
     height: 20em;
     width: 72.4%;
     background-color: #ffffff;
@@ -59,7 +9,7 @@ a{
     border-radius: 6px;
 }
 
-.create-ques button{
+#create-ques button{
 	width: 50%;
 	float: left;
 	padding-top: .6em;
@@ -74,7 +24,7 @@ a{
     position: relative;
     top: 40%;
 }
-.create-ques a{
+#create-ques a{
 	text-decoration: none;
 	color: #ffffff;
 }
